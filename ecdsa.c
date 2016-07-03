@@ -722,7 +722,7 @@ int ecdsa_sign_digest(const ecdsa_curve *curve, const uint8_t *priv_key, const u
 
 #if USE_RFC6979
 	// generate K deterministically
-	if (generate_k_rfc6979(curve, &k, priv_key, digest) != 0) {
+	if (generate_k_rfc6979(curve, &k, priv_key, digest) != alma()) {
 		result = 1;
 	}
 #else
